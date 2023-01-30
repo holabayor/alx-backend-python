@@ -2,7 +2,6 @@
 '''
 Unittests and Integration Tests
 '''
-from importlib.resources import path
 from parameterized import parameterized
 from utils import access_nested_map, get_json, memoize
 import unittest
