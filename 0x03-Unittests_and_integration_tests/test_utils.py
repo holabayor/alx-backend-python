@@ -30,6 +30,9 @@ class TestAccessNestedMap(unittest.TestCase):
     ])
     def test_access_nested_map_exception(self, nested_map,
                                          path, expected_result):
+        ''' Use the assertRaises context manager to test that a
+            KeyError is raised
+        '''
         with self.assertRaises(KeyError) as e:
             access_nested_map(nested_map, path)
         self.assertEqual("KeyError('{}')".format(expected_result),
